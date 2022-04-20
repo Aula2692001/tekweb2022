@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=D, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>VOLLYBALL</title>
+    <style>
+        *{
+    margin: 0px;
+    padding: 0px;
+}
+.bg{
+    background-color: #de70ff;
+    color: white;
+    width: 100%;
+    height: 2200px;
+    background-image: url("vintage2.jpg");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.bg1{
+    background-color: white;
+    color: white;
+    width: 80%;
+    margin-left: 10%;
+    height: 350px;
+    transform: translateY(50px);
+    border-radius: 10px;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    overflow: hidden;
+
+
+
+}
+.gambar img{
+    width: 200px;
+    border-radius: 50%;
+    height: 220px;
+   
+}
+.sosmed button{
+    border: none;
+    background-color:rgb(255, 255, 255, 0);
+    border-radius: 50px;
+}
+.sosmed img{
+    width: 30px;
+}
+.container{
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    transform: translateY(250px);
+    width: 80%;
+    margin-left: 10%;
+
+}
+.artikel{
+    width: 300px;
+    height: 270px;
+    background-color: rgb(198, 52, 255);
+    margin: 17px;
+    border-radius: 10px;
+    color: black;
+    font-family: 'Noto Serif', serif;
+
+    margin-top: 50px;
+}
+.bg2 img{
+    width: 100%;
+    border-radius: 10px;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+.bg2{
+    width: 80%;
+    margin-left: 6.5%;
+    position: absolute;
+    transform: translateY(100px);
+ 
+}
+.bg3{
+    width: 100%;
+    position: absolute;
+    z-index: -2;
+
+}
+.bg3 img{
+    width: 100%;
+    height: 400px;
+
+}
+.tulisan h3{
+    width: 200px;
+    color: black;
+    margin-left: 175px;
+    border-radius: 5px;
+}
+.tulisan p{
+    width: 560px;
+    color: black;
+    border-radius: 5px;
+}
+.artikel button{
+    border: none;
+    color: white;
+    background-color: brown ;
+    width: 50px;
+    margin-top: 10px;
+    border-radius: 5px;
+    height: 20px;
+    font-family: "Courier New", Courier, monospace;
+}
+.content button a{
+    text-decoration: none;
+    color: white;
+}
+.artikel img{
+    border-radius: 10px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 45px;
+    padding-left: 8%;
+    padding-right: 8%;
+    font-family: 'Poppins', sans-serif;
+}
+.logo{
+    color: black;
+    font-size: 35px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+span{
+    color: white;
+}
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 25px;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+nav ul li a:hover{
+    color: black;
+    transition: 0.5s;
+
+}
+.btn{
+    background-color: black;
+    color: wheat;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+}
+    </style>
+</head>
+<body>
+    <div class="bg"> 
+        <div class="bg1">
+            <div class="gambar">
+                <img src="ppvoli.png" alt="" width="100">
+
+            </div>
+            <div class="bg3">
+            <img src="bgvoli1.png" alt="">
+            </div>
+
+            <div class="tulisan">
+              <h3>
+                  {{ nama}}
+              </h3>
+              <p>
+                  {{p}}
+              </p>
+              <div class="sosmed">
+                  <button><a href="https://www.instagram.com/piliang___"><img src="https://img.icons8.com/fluency/48/000000/instagram-new.png"/></a></button>
+                  <button><a href="https://www.facebook.com/"><img src="https://img.icons8.com/fluency/48/000000/facebook-new.png"/> </a></button>
+                  <button><a href="https://github.com/raihanpiliang"><img src="https://img.icons8.com/ios-filled/50/000000/github.png"/> </a></button>
+
+              </div>
+            </div>
+        </div>
+        <div class="bg2">
+            <img src="bgvoli2.png" alt="">
+        </div>
+        <div class="container">
+            <div class="artikel">
+                <img src="porbapomi.jpg" alt="" width="200px">
+                <div class="content">
+                    <h4>
+                        PORBAPOMI
+                    </h4>
+                
+                    <br>
+                    <p>Yogyakarta, Oktober 2021</p>
+                    <button><a href="#">BACA</a></button>
+
+                </div>
+            </div>
+            <div class="artikel">
+                <img src="stieykp.jpg" alt="" width="200px">
+                <div class="content">
+                    <h4>
+                        STIE YKP CUP II
+                    </h4>
+                    <br>
+                    <p>STIE YKP, Desember 2021</p>
+                    <button><a href="#">BACA</a></button>
+
+                </div>
+            </div>
+            <div class="artikel">
+                <img src="itny.jpg" alt="" width="200px">
+                <div class="content">
+                    <h4>
+                        ITNY CUP II
+                    </h4>
+                    <br>
+                    <p>ITNY, Maret 2022</p>
+                    <button><a href="#">BACA</a></button>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        const isi = {
+            nama:'Aula Zahra',
+            p : '"Seorang jenius akan terus melangkah, dan menemukan tempat yang bagus untuk bakatnya."" '
+        }
+        const vm = new Vue({
+            el: ".tulisan",
+            data: isi
+        })
+        
+    </script>
+    <script>
+    ScrollReveal({
+        reset: true,
+        distance: '60px',
+        duration: 1000,
+        delay: 0
+    });
+
+    ScrollReveal().reveal('.bg3', { delay: 100, origin: 'top' });
+    ScrollReveal().reveal('.container', { delay: 0, origin: 'top' });
+</script>
+</body>
+</html>
+
+
+}
